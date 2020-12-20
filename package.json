@@ -1,8 +1,8 @@
 {
-  "name": "rye-connect",
+  "name": "merit-connect",
   "version": "1.0.0",
-  "description": "social network for ryerson computer science students",
-  "main": "server.js",
+  "description": "a job search platform for merit alumni",
+  "main": "backend/server.js",
   "type": "module",
   "scripts": {
     "start": "node backend/server.js",

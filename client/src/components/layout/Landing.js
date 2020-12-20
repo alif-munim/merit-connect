@@ -1,11 +1,14 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
+import { Row, Col, Card } from "react-bootstrap";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import SlideShow from "./SlideShow.js";
 
-const Landing = () => {
+const Landing = ({ isAuthenticated }) => {
 
   return (
+    <>
     <section className="landing">
       <div className="dark-overlay">
         <div className="landing-inner">
@@ -13,7 +16,8 @@ const Landing = () => {
           <p className="lead">
             <strong>Build</strong> your profile, <strong>share</strong> your skills, <strong>showcase</strong> your projects, <br/>and <strong>connect</strong> with other Merit alumni.
           </p>
-          <div className="buttons">
+          {!isAuthenticated && (
+            <div className="buttons">
             <Link to="/register" className="btn btn-primary">
               Sign Up
             </Link>
@@ -21,9 +25,13 @@ const Landing = () => {
               Login
             </Link>
           </div>
+          )}
+          
         </div>
       </div>
     </section>
+    <SlideShow/>
+    </>
   );
 };
 
