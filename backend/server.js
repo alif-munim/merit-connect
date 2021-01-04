@@ -8,6 +8,7 @@ import userRoutes from "./routes/api/users.js";
 import authRoutes from "./routes/api/auth.js";
 import profileRoutes from "./routes/api/profile.js";
 import postRoutes from "./routes/api/posts.js";
+import uploadRoutes from "./routes/api/upload.js";
 
 const app = express();
 
@@ -22,6 +23,10 @@ app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/profile", profileRoutes);
 app.use("/api/posts", postRoutes);
+app.use("/api/upload", uploadRoutes);
+
+const __dirname = path.resolve();
+app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
 // Serve static assets in production
 if(process.env.NODE_ENV === "production") {
