@@ -3,7 +3,7 @@ import React, { Fragment, useState } from 'react'
 import { Form, Button, Row, Col } from "react-bootstrap";
 import FormContainer from '../layout/FormContainer';
 
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
 import { addEducation } from "../../actions/profile";
@@ -28,6 +28,7 @@ const AddEducation = ({ addEducation, history }) => {
     const onSubmit = e => {
         e.preventDefault();
         addEducation(formData, history);
+        history.push("/dashboard");
     }
 
     return (
@@ -76,6 +77,9 @@ const AddEducation = ({ addEducation, history }) => {
                         ></Form.Control>
                     </Form.Group>
                     <Button variant="primary" type="submit">Submit</Button>
+                    <Link className="btn btn-light my-3" to="/dashboard">
+			      	    Go Back
+			        </Link>
                 </Form>
             </FormContainer>
         </Fragment>

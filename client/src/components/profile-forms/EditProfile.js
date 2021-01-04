@@ -240,7 +240,7 @@ const EditProfile = ({
               Submit
             </Button>
 
-            <Link className="btn btn-light my-3" to="/">
+            <Link className="btn btn-light my-3" to="/dashboard">
 			      	Go Back
 			      </Link>
         </Form>
