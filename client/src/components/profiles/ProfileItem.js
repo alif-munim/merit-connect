@@ -1,5 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { LinkContainer } from "react-router-bootstrap";
+
+import { Card, Button, Row, Col, Image } from "react-bootstrap";
+
 import PropTypes from "prop-types";
 
 const ProfileItem = ({ profile: {
@@ -10,24 +14,40 @@ const ProfileItem = ({ profile: {
     skills
 } }) => {
     return (
-        <div className="profile bg-light">
-            <img src={avatar} alt="" className="round-img"/>
-            <div>
-                <h2>{name}</h2>
-                <p>{status} {company && <span> at {company}</span>}</p>
-                <p className="my-1">{location && <span>{location}</span>}</p>
-                <Link to={`profile/${_id}`} className="btn btn-primary">
-                    View Profile
-                </Link>
-            </div>
-            <ul>
+        <>
+        <Card className="shadow my-3 rounded">
+            <Row>
+                <Col md={3} className="my-auto">
+                    <Image src={avatar} className="rounded-circle p-3"/>
+                </Col>
+                <Col md={6}>
+                    <Card.Body>
+                        <Card.Title>
+                            <h4>{name}</h4>
+                        </Card.Title>
+                        <Card.Text>
+                            <p>
+                                {status} {company && <span> at {company}</span>} <br/>
+                                {location && <span>{location}</span>}
+                            </p>
+                        </Card.Text>
+                        <LinkContainer to={`profile/${_id}`}>
+                                <Button variant="primary">View Profile</Button>
+                            </LinkContainer>
+                    </Card.Body>
+                </Col>
+                <Col md={3} className="my-auto">
+                <ul>
                 {skills.slice(0, 4).map((skill, index) => (
                     <li key={index} className="text-primary">
                         <i className="fas fa-check"></i> {skill}
                     </li>
                 ))}
-            </ul>
-        </div>
+                </ul>
+                </Col>
+            </Row>
+        </Card>
+        </>
     )
 }
 
