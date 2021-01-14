@@ -13,14 +13,14 @@ const ProfileTop = ({ profile: {
 }}) => {
     return (
         <>
-        <Card className="card-gradient rounded">
+        <Card className="shadow card-gradient rounded profile-top">
             <Row>
-                <Col md={4} className="mx-auto mt-5">
+                <Col md={4} className="mt-5">
                     <Image src={avatar} className="rounded-circle"/>
                 </Col>
             </Row>
             
-            <Card.Body className="mx-auto text-center">
+            <Card.Body >
                 <Card.Title className="mx-auto">
                     <h1 className="text-white">{name}</h1>
                 </Card.Title>
@@ -29,7 +29,7 @@ const ProfileTop = ({ profile: {
                 </p>
             </Card.Body>
             
-            <Row className="mx-auto mb-5">
+            <Row className="mb-5">
                 {
                     website && (
                         <a href={website} target="_blank" rel="noopener noreferrer">

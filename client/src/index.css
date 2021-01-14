@@ -19,3 +19,7 @@ a .social-icon /* or selector a .fa */ {
 	display: inline-block;
 	transition: 0.5s;
 }
+
+.borderless {
+	border: 0;
+}
