@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { Card, Row, Col, Image } from "react-bootstrap";
+
 const ProfileTop = ({ profile: {
     status,
     company,
@@ -10,20 +12,28 @@ const ProfileTop = ({ profile: {
     user: { name, avatar }
 }}) => {
     return (
-        <div className="profile-top bg-primary p-2">
-            <img
-                className="round-img my-1"
-                src={avatar}
-                alt=""
-            />
-            <h1 className="large">{name}</h1>
-            <p className="lead">{status} {company && <span>at {company}</span>}</p>
-            <p>{location && <span>{location}</span>}</p>
-            <div className="icons my-1">
+        <>
+        <Card className="shadow card-gradient rounded profile-top">
+            <Row>
+                <Col md={4} className="mt-5">
+                    <Image src={avatar} className="rounded-circle"/>
+                </Col>
+            </Row>
+            
+            <Card.Body >
+                <Card.Title className="mx-auto">
+                    <h1 className="text-white">{name}</h1>
+                </Card.Title>
+                <p className="text-white">{status} {company && <span>at {company}</span>} <br/>
+                {location && <span>{location}</span>}
+                </p>
+            </Card.Body>
+            
+            <Row className="mb-5">
                 {
                     website && (
                         <a href={website} target="_blank" rel="noopener noreferrer">
-                            <i className="fas fa-globe fa-2x"></i>
+                            <i className="social-icon fas fa-globe fa-2x"></i>
                         </a>
                     )
                 }
@@ -31,7 +41,7 @@ const ProfileTop = ({ profile: {
                 {
                     social && social.twitter && (
                         <a href={social.twitter} target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-twitter fa-2x"></i>
+                            <i className="social-icon fab fa-twitter fa-2x"></i>
                         </a>
                     )
                 }
@@ -39,7 +49,7 @@ const ProfileTop = ({ profile: {
                 {
                     social && social.facebook && (
                         <a href={social.facebook} target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-facebook fa-2x"></i>
+                            <i className="social-icon fab fa-facebook fa-2x"></i>
                         </a>
                     )
                 }
@@ -47,7 +57,7 @@ const ProfileTop = ({ profile: {
                 {
                     social && social.linkedin && (
                         <a href={social.linkedin} target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-linkedin fa-2x"></i>
+                            <i className="social-icon fab fa-linkedin fa-2x"></i>
                         </a>
                     )
                 }
@@ -55,7 +65,7 @@ const ProfileTop = ({ profile: {
                 {
                     social && social.youtube && (
                         <a href={social.youtube} target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-youtube fa-2x"></i>
+                            <i className="social-icon fab fa-youtube fa-2x"></i>
                         </a>
                     )
                 }
@@ -63,15 +73,20 @@ const ProfileTop = ({ profile: {
                 {
                     social && social.instagram && (
                         <a href={social.instagram} target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-instagram fa-2x"></i>
+                            <i className="social-icon fab fa-instagram fa-2x"></i>
                         </a>
                     )
                 }
                 
                 
                 
-            </div>
-        </div>
+            </Row>
+                
+                
+            
+        </Card>
+        
+        </>
     );
 }
 
