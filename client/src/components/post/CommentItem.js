@@ -1,4 +1,7 @@
 import React, { Fragment } from "react";
+
+import { Row, Col, Image, Card} from "react-bootstrap";
+
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
@@ -13,7 +16,34 @@ const CommentItem = ({
     auth
 }) => {
     return (
-        <div className="post bg-white p-1 my-1">
+      <>
+        <Card className="shadow my-3 rounded">
+            <Card.Body>
+              <Card.Text>
+                <p className="my-1">{text}</p>
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer className="my-auto">                   
+              <Row >
+                <Col md={1}>
+                  <Link to={`/profile/${user}`}>
+                    <Image src={avatar} className="rounded-circle post-image"/>
+                  </Link>
+                </Col>
+                <Col md={11} className="my-auto">
+                  <Row>
+                    <Link to={`/profile/${user}`}>
+                      <h4 className="mb-0">{name}</h4>
+                    </Link>
+                  </Row>
+                  <Row>
+                    <Moment format="YYYY/MM/DD">{date}</Moment>
+                  </Row>
+                </Col>
+              </Row>
+            </Card.Footer>
+        </Card>
+        {/* <div className="post bg-white p-1 my-1">
           <div>
             <Link to={`/profile/${user}`}>
               <img
@@ -40,7 +70,8 @@ const CommentItem = ({
                 </button>
             )}
           </div>
-        </div>
+        </div> */}
+        </>
     )
 }
 

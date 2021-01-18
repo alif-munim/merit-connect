@@ -1,3 +1,7 @@
+p {
+	font-weight: normal;
+}
+
 .card-gradient {
 	background: linear-gradient(
 		-45deg,
@@ -22,4 +26,8 @@ a .social-icon /* or selector a .fa */ {
 
 .borderless {
 	border: 0;
+}
+
+.post-image {
+	max-width: 150px;
 }
