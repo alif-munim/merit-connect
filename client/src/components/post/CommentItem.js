@@ -17,31 +17,31 @@ const CommentItem = ({
 }) => {
     return (
       <>
-        <Card className="shadow my-3 rounded">
-            <Card.Body>
-              <Card.Text>
-                <p className="my-1">{text}</p>
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer className="my-auto">                   
-              <Row >
-                <Col md={1}>
+
+        <Card className="shadow-sm my-3 rounded p-3">
+            <Row>
+                <Col md={2} className="my-auto text-center">
                   <Link to={`/profile/${user}`}>
-                    <Image src={avatar} className="rounded-circle post-image"/>
+                    <Image src={avatar} className="rounded-circle p-3 post-image"/>
+                    <h4>{name}</h4>
                   </Link>
                 </Col>
-                <Col md={11} className="my-auto">
-                  <Row>
-                    <Link to={`/profile/${user}`}>
-                      <h4 className="mb-0">{name}</h4>
-                    </Link>
-                  </Row>
-                  <Row>
-                    <Moment format="YYYY/MM/DD">{date}</Moment>
-                  </Row>
+                <Col md={10} className="my-auto">
+                    <p className="my-1">{text}</p>
+                    <p className="small">
+                    Posted on <Moment format="YYYY/MM/DD">{date}</Moment>
+                    </p>
+                    {!auth.loading && user === auth.user._id && (
+                        <button 
+                            onClick={e => deleteComment(postId, _id)} 
+                            type="button"
+                            className="btn btn-danger">
+                                <i className="fas fa-times"></i>
+                        </button>
+                    )}
                 </Col>
-              </Row>
-            </Card.Footer>
+                
+            </Row>
         </Card>
         {/* <div className="post bg-white p-1 my-1">
           <div>
