@@ -54,7 +54,7 @@ const Landing = ({ isAuthenticated }) => {
                       </div>
                       <div className="media-body">
                         <h5 className="mt-0">Virtual Networking</h5>
-                        <span className="text-muted">A major part of getting a leg-up when internship hunting is using your network. Often times, a having good connection vouch for you will put you leaps and bounds ahead of the competition.
+                        <span className="text-muted">A major part of getting a leg-up when internship hunting is using your network. Often times, a having good connection vouch for you will put you leaps and bounds ahead of the competition. See <span className="text-primary font-weight-bold"><a href="https://www.meetup.com/home/">MeetUp</a></span>.
 </span>
                       </div>
                     </div>
@@ -68,7 +68,7 @@ const Landing = ({ isAuthenticated }) => {
                       </div>
                       <div className="media-body">
                         <h5 className="mt-0">LinkedIn Profiles</h5>
-                        <span className="text-muted">Putting together a decent LinkedIn profile isn’t something they teach you in school. During COVID-19, it’s the first place potential employers will look to find out more about you.
+                        <span className="text-muted">Putting together a decent LinkedIn profile isn’t something they teach you in school. During COVID-19, it’s the first place potential employers will look to find out more about you. See the <span className="text-primary font-weight-bold"><a href="https://business.linkedin.com/en-uk/marketing-solutions/blog/posts/content-marketing/2017/17-steps-to-a-better-LinkedIn-profile-in-2017">LinkedIn Blog</a></span>.
 </span>
                       </div>
                     </div>
@@ -82,7 +82,7 @@ const Landing = ({ isAuthenticated }) => {
                       </div>
                       <div className="media-body">
                         <h5 className="mt-0">LinkedIn Posts</h5>
-                        <span className="text-muted">It’s difficult to tell the world that you’re having difficulties finding a job. However, it’s a struggle many are facing during the pandemic and many more are sympathetic to. The power of having a strong LinkedIn network may surprise you.
+                        <span className="text-muted">It’s difficult to tell the world that you’re having difficulties finding a job. However, it’s a struggle many are facing during the pandemic and many more are sympathetic to. The power of having a strong LinkedIn network may surprise you. See <span className="text-primary font-weight-bold"><a href="https://university.linkedin.com/content/dam/university/global/en_US/site/pdf/TipSheet_FindingaJoborInternship.pdf">LinkedIn for Higher Ed</a></span>.
 </span>
                       </div>
                     </div>
@@ -96,7 +96,7 @@ const Landing = ({ isAuthenticated }) => {
                       </div>
                       <div className="media-body">
                         <h5 className="mt-0">Micro-Internships</h5>
-                        <span className="text-muted">Throughout the internship hunting process, it’s important to keep learning and building your portfolio. Sites like Fiverr are a great place to find freelance projects that are specially catered to your skillset, and potential talking points for your next interview!
+                        <span className="text-muted">Throughout the internship hunting process, it’s important to keep learning and building your portfolio. Sites like Fiverr are a great place to find freelance projects that are specially catered to your skillset, and potential talking points for your next interview! See <span className="text-primary font-weight-bold"><a href="https://www.fiverr.com/">Fiverr</a></span>.
 </span>
                       </div>
                     </div>
@@ -110,7 +110,7 @@ const Landing = ({ isAuthenticated }) => {
                       </div>
                       <div className="media-body">
                         <h5 className="mt-0">Free Courses</h5>
-                        <span className="text-muted">Thousands of courses on LinkedIn Learning are available completely free of cost for students enrolled in full-time studies. Complete a course, post about it, and display it on your profile!
+                        <span className="text-muted">Thousands of courses on LinkedIn Learning are available completely free of cost for students enrolled in full-time studies. Complete a course, post about it, and display it on your profile! See <span className="text-primary font-weight-bold"><a href="https://www.linkedin.com/learning/">LinkedIn Learning</a></span>.
 </span>
                       </div>
                     </div>
@@ -124,7 +124,7 @@ const Landing = ({ isAuthenticated }) => {
                       </div>
                       <div className="media-body">
                         <h5 className="mt-0">Resume Crafting</h5>
-                        <span className="text-muted">Nowadays, resumes are filtered through the eyes of artificial intelligence before they even reach the eyes of a human. Make sure you fine-tune it to optimize your chances at getting through the door.
+                        <span className="text-muted">Nowadays, resumes are filtered through the eyes of artificial intelligence before they even reach the eyes of a human. Make sure you fine-tune it to optimize your chances at getting through the door. See <span className="text-primary font-weight-bold"><a href="https://resumeworded.com/score">Resume Worded</a></span>.
 </span>
                       </div>
                     </div>
