@@ -18,7 +18,7 @@ const PostItem = ({
 }) => {
     return (
       <>
-        <Card className="shadow my-3 rounded p-3">
+        <Card className="shadow-sm my-3 rounded p-3">
             <Row>
                 <Col md={2} className="my-auto text-center">
                   <Link to={`/profile/${user}`}>
@@ -44,7 +44,7 @@ const PostItem = ({
                 </button>
                 <Link to={`/posts/${_id}`} className="btn btn-primary">
                     Discussion {comments.length > 0 && (
-                        <span className='comment-count'>{comments.length}</span>
+                        <span className='badge badge-pill'>{comments.length}</span>
                     )}
                 </Link>
                 {!auth.loading && user === auth.user._id && (

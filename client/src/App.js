@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./bootstrap.min.css"
-import "./App.css";
+// import "./App.css";
 import "./index.css";
 import Navbar from "./components/layout/Navbar";
 import Landing from "./components/layout/Landing";
