@@ -47,6 +47,14 @@ ul {
 	margin-right: 0.6rem;
 }
 
+/* Video Modal */
+.video-wrapper {
+}
+
+#video-close {
+	top: 8rem;
+}
+
 /* Profile */
 
 .profile-top {
