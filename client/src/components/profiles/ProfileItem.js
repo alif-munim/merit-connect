@@ -15,12 +15,12 @@ const ProfileItem = ({ profile: {
 } }) => {
     return (
         <>
-        <Card className="shadow my-3 rounded">
+        <Card className="shadow-sm my-3 rounded">
             <Row>
                 <Col md={3} className="my-auto">
                     <Image src={avatar} className="rounded-circle p-3"/>
                 </Col>
-                <Col md={6}>
+                <Col md={6} className="my-auto">
                     <Card.Body>
                         <Card.Title>
                             <h4>{name}</h4>
