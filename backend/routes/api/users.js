@@ -63,13 +63,13 @@ router.post(
       // Return JWT
       const payload = {
         user: {
-          id: user._id
+          id: user.id
         }
       };
 
       jwt.sign(
         payload,
-        config.get("jwtSecret"),
+        process.env.JWT_SECRET,
         { expiresIn: 360000 },
         (err, token) => {
           if (err) throw err;
